@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPCO</title>
+    <link rel="stylesheet" href="styles.css/styles.css">
+    <link rel="icon" href="Assets/logo aba.jpg" type="image/jpg">
+</head>
+
+<body>
+    <div class="contact-info">
+        <span>📍 Europaboulevard 58, 6135</span>
+        <span>📞 Telefone: +31 1234-5678</span>
+        <span>✉️ hapco@dominio.com</span>
+    </div>
+    
+    <header class="top">
+        <img src="Assets/logo.jpg" class="top logo">
+        <div class="toggle-menu" id="toggleMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="top__menu" id="menu">
+            <a class="top__menu__link" href="#home">Home</a>
+            <a class="top__menu__link" href="#services">Services</a>
+            <a class="top__menu__link" href="#about">About</a>
+            <a class="top__menu__link" href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="background-box" id="home">
+    <div class="background-box-left">
+        <div class="background-box-text">
+        <h1>SPECIALIZED IN TOTAL PROJECTS AUTOMATION</h1>
+        <a class="we__do__button" href="#services">WHAT WE DO</a>
+        </div>
+    </div>
+    <div class="background-box-right"></div>
+    </div>
+    <main class="info">
+        <section class="info__content" id="services">
+            <h1 class="info__content__title">Services</h1>
+            <div class="info__boxes">
+                <div class="content__electrical">
+                    <img src="Assets/project.jpg">
+                    <h2 class="info__content__subtitle">Electrical Hardware Design</h2>
+                        <p class="info__content__content">Our hardware designers work closely with customers to fully understand project specifications and objectives. Using ePlan software the client’s conceptual design is being transformed into a fully operational electrical control system assuring compliance with current quality and safety standards.All required documentation such as electrical lay-out, panel lay-out and wiring diagrams as well as labels are being generated automatically by using the latest software tools.</p>
+                </div>
+                <div class="content__panel">
+                    <img src="Assets/kast.jpg">
+                    <h2 class="info__content__subtitle">Panel Build & Electrical Installation</h2>
+                        <p class="info__content__content">In our workshop we are able to build a large diversity of control panels, ranging from simple pushbutton stations to complex multi-panel power supply and control systems. All panels are being labelled according the electrical design and are supplied with as-built ePlan documentation. A team of experienced industrial electricians can perform or supervise the on-site electrical installation of panels as well as complete control systems. electrical lay-out, panel lay-out and wiring diagrams as well as labels are being generated automatically by using the latest software tools.</p>
+                </div>
+                <div class="content__fiber">
+                    <img src="Assets/fiberglass.jpg">
+                    <h2 class="info__content__subtitle">Fiberglass</h2>
+                        <p class="info__content__content">In our projects, we provide complete fiber optic cabling solutions, from routing and pulling cables throughout industrial facilities to the installation and configuration of network switches. Our experienced technicians ensure that each step meets the highest standards of performance and reliability. All connections are tested and certified, and the entire system is documented for future maintenance and scalability. By using modern tools and best practices, we guarantee a robust and future-proof network infrastructure.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about__box" id="about">
+            <img class="about__img" src="Assets/Background.jpg">
+            <div class="background-box-text">
+                <h1>ABOUT US</h1>
+                <p class="info__content__content">Founded in 1998, Hapco (Handling Projects and Consultancy) specializes in customized industrial automation. We handle complete projects from concept to commissioning, including electrical hardware design, panel building, installation, PLC/PC programming, and maintenance. While mainly active in the Benelux, we also operate across Europe and globally.</p>
+            </div>
+        </section>
+        <section class="contact__box" id="contact">
+            <div class="contact__left">
+                <h1 class="contact__titulo">CONTACT US</h1>
+                <div class="inquiries">
+                    <h2 class="contact__inquiries">Inquiries</h2>
+                    <div class="contact">
+                        <span class="info__content__content">For any inquiries, questions or commendations, please call: +31 1234-5678 or send and e-mail to hapco@dominio.com</span>
+                    </div>
+                </div>
+                <div class="inquiries">
+                    <h2 class="contact__inquiries">Head office</h2>
+                    <span class="contact info__content__content">HAPCO Engineering</span>
+                    <span class="contact info__content__content"> Europaboulevard 58, 6135</span>
+                    <span class="contact info__content__content">+31 12 23 56 78</span>
+                    <span class="contact info__content__content">hapco@dominio.com</span>
+                </div>
+            </div>
+            <div class="contact__right">
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417.88590236278554!2d5.850373461173508!3d50.99595502719081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0c7837a6b91f3%3A0xab7637e2a5e5ab58!2sEuropaboulevard%2058%2C%206135%20LD%20Sittard!5e0!3m2!1spt-BR!2snl!4v1750059846344!5m2!1spt-BR!2snl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>©2025 HAPCO Industrial Automation Electrotechnics</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('toggleMenu');
+        const topMenu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            topMenu.classList.toggle('show');
+            menuToggle.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
