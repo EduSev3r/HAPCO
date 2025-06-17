@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAPCO</title>
@@ -12,13 +14,19 @@
 
 <body>
     <div class="contact-info">
-    <span>📍 Europaboulevard 58, 6135</span>
-    <span>📞 Telefone: +31 1234-5678</span>
-    <span>✉️ hapco@dominio.com</span>
-</div>
+        <span>📍 Europaboulevard 58, 6135</span>
+        <span>📞 Telefone: +31 1234-5678</span>
+        <span>✉️ hapco@dominio.com</span>
+    </div>
+    
     <header class="top">
         <img src="Assets/logo.jpg" class="top logo">
-        <nav class="top__menu">
+        <div class="toggle-menu" id="toggleMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="top__menu" id="menu">
             <a class="top__menu__link" href="#home">Home</a>
             <a class="top__menu__link" href="#services">Services</a>
             <a class="top__menu__link" href="#about">About</a>
@@ -51,7 +59,7 @@
                 <div class="content__fiber">
                     <img src="Assets/fiberglass.jpg">
                     <h2 class="info__content__subtitle">Fiberglass</h2>
-                        <p class="info__content__content">In our workshop we are able to build a large diversity of control panels, ranging from simple pushbutton stations to complex multi-panel power supply and control systems. All panels are being labelled according the electrical design and are supplied with as-built ePlan documentation. A team of experienced industrial electricians can perform or supervise the on-site electrical installation of panels as well as complete control systems. electrical lay-out, panel lay-out and wiring diagrams as well as labels are being generated automatically by using the latest software tools.</p>
+                        <p class="info__content__content">In our projects, we provide complete fiber optic cabling solutions, from routing and pulling cables throughout industrial facilities to the installation and configuration of network switches. Our experienced technicians ensure that each step meets the highest standards of performance and reliability. All connections are tested and certified, and the entire system is documented for future maintenance and scalability. By using modern tools and best practices, we guarantee a robust and future-proof network infrastructure.</p>
                 </div>
             </div>
         </section>
@@ -59,7 +67,7 @@
             <img class="about__img" src="Assets/Background.jpg">
             <div class="background-box-text">
                 <h1>ABOUT US</h1>
-                <span class="about__text">Hapco werd opgericht te 1 januari 1998 en is een afkorting die staat voor Handling Projects and COnsultancy.</span>
+                <p class="info__content__content">Founded in 1998, Hapco (Handling Projects and Consultancy) specializes in customized industrial automation. We handle complete projects from concept to commissioning, including electrical hardware design, panel building, installation, PLC/PC programming, and maintenance. While mainly active in the Benelux, we also operate across Europe and globally.</p>
             </div>
         </section>
         <section class="contact__box" id="contact">
@@ -90,6 +98,17 @@
     <footer class="foot">
         <p>©2025 HAPCO Industrial Automation Electrotechnics</p>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('toggleMenu');
+        const topMenu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            topMenu.classList.toggle('show');
+            menuToggle.classList.toggle('open');
+        });
+    </script>
+
 </body>
 
 </html>
