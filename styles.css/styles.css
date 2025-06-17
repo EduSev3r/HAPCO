@@ -14,6 +14,38 @@
     box-sizing: border-box;
 }
 
+#menu #services #about #contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px;
+}
+
+#menu #services #about #contact ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu #services #about #contact li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu #services #about #contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+html {
+    scroll-padding-top: 150px; /* Ajuste a altura do menu fixo aqui */
+    scroll-behavior: smooth;
+}
+
 .info__content__content,
 .about__box .background-box-text span {
     text-align: justify;
@@ -242,7 +274,7 @@ main.info {
 
 /* Background Box */
 .background-box {
-    height: 100vh;
+    height: 500px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -309,6 +341,9 @@ main.info {
     border: none;
 }
 
+.we__do__button:hover {
+    background-color: var(--cor-box);
+}
 /* About Us Section */
 .about__img {
     height: auto;
@@ -382,6 +417,48 @@ main.info {
     margin: 2rem 0;
 }
 
+.top__menu__language {
+    position: relative;
+    display: inline-block;
+}
+
+.top__menu__language button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--cor-menu);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.language__options {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-secundaria);
+    top: 100%;
+    right: 0;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.language__options a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.language__options a:hover {
+    background-color: var(--cor-box);
+}
+
+.language__options.show {
+    display: block;
+}
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
    
@@ -395,6 +472,15 @@ main.info {
 
   .contact-info span {
     margin-right: 0;
+  }
+
+    .contact__box {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .contact__right {
+    order: 1; /* garante que venha depois do left */
   }
 
     .top {
