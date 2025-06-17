@@ -1,11 +1,12 @@
 :root {
-    --cor-do-texto: #bcbbbb;
-    --cor-principal: #5798ab;
-    --cor-principal-transparent: #5798ab79;
-    --cor-secundaria: #101828;
-    --cor-menu: #f4fcf9;
-    --cor-escura: #0b101a;
-    --cor-box: #112233;
+    --cor-do-texto: #1a1a1a;
+    --cor-principal: #0b2e4a; /* azul escuro como cor de destaque */
+    --cor-principal-transparent: #0b2e4a79;
+    --cor-secundaria: #ffffff; /* fundo claro */
+    --cor-menu: #0b2e4a;
+    --cor-escura: #f4f4f4; /* para seções alternadas */
+    --cor-box: #f9f9f9;
+    --cor-clara: #5798ab;
 }
 
 * {
@@ -310,7 +311,7 @@ main.info {
     position: relative;
     z-index: 2;
     text-align: left;
-    color: var(--cor-menu);
+    color: var(--cor-box);
     padding: 2rem;
     max-width: 50%;
     font-weight: bold;
@@ -332,7 +333,7 @@ main.info {
 .we__do__button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--cor-principal, #5798ab);
+    background-color: var(--cor-box, #5798ab);
     color: var(--cor-menu);
     font-weight: bold;
     border-radius: 5px;
@@ -342,7 +343,7 @@ main.info {
 }
 
 .we__do__button:hover {
-    background-color: var(--cor-box);
+    background-color: var(--cor-clara);
 }
 /* About Us Section */
 .about__img {
