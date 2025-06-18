@@ -284,6 +284,7 @@ main.info {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    padding-left: 100px;
 }
 
 .background-box::before {
@@ -463,6 +464,10 @@ main.info {
     display: block;
 }
 
+.map-frame {
+    width: 100%;
+    height: 300px;
+}
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
    
@@ -501,9 +506,14 @@ main.info {
     width: 100%;
     text-align: start;
     box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
-
+.background-box {
+    padding-left: 10px;
+}
 
     .top__menu {
         flex-direction: column;
@@ -549,7 +559,7 @@ main.info {
     .about__box {
         flex-direction: column; /* Coloca a imagem e o texto em linha (lado a lado) */
         align-items: center;  /* Alinha os itens no centro */
-        padding: 3rem;        /* Ajuste no padding para telas pequenas */
+        padding: 1rem;        /* Ajuste no padding para telas pequenas */
     }
 
     .about__img {
