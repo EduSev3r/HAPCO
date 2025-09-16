@@ -4,7 +4,7 @@
     --cor-principal-transparent: #468faf33;
     --cor-secundaria: #EAECF0;
     --cor-menu: #0b2e4a;
-    --cor-escura: #f4faff;
+    --cor-escura: #ff0000;
     --cor-box: #e6f1f5;
     --cor-clara: #70C5DF;
     --branco: #ffffff;
@@ -17,32 +17,7 @@
     box-sizing: border-box;
 }
 
-#menu #services #about #contact {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--cor-escura);
-    z-index: 1000;
-    padding: 10px;
-}
 
-#menu #services #about #contact ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu #services #about #contact li {
-    display: inline;
-    margin-right: 20px;
-}
-
-#menu #services #about #contact a {
-    color: var(--cor-menu);
-    text-decoration: none;
-    font-size: 16px;
-}
 
 html {
     scroll-padding-top: 150px;
@@ -57,7 +32,7 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--cor-secundaria);
+    background-color: var(--branco);
     color: var(--cor-menu);
     margin: 0;
     padding: 0;
@@ -75,7 +50,7 @@ header,
     align-items: center;
     padding: 10px 20px;
     /* ajuste se quiser mais espaço */
-    background-color: var(--cor-secundaria);
+    background-color: var(--branco);
     /* ou a cor de fundo do header */
     position: relative;
     z-index: 999;
@@ -96,7 +71,7 @@ a:hover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--branco);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -111,11 +86,14 @@ a:hover {
 }
 
 .top__menu__link {
-    color: var(--cor-menu);
+    color: var(--cor-escura);
     font-weight: bold;
     transition: color 0.3s;
 }
 
+ul.menu li a.top__menu__link:hover {
+  color: blue;
+}
 /* Menu Toggle */
 
 .toggle-menu {
@@ -125,7 +103,6 @@ a:hover {
 .toggle-menu .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--cor-menu);
     margin: 4px 0;
 }
 
@@ -139,7 +116,6 @@ a:hover {
 .menu-toggle span {
     width: 30px;
     height: 4px;
-    background-color: var(--cor-menu);
     transition: all 0.3s ease;
 }
 
@@ -181,6 +157,56 @@ a:hover {
     text-align: center;
 }
 
+.top__menu__link:hover,
+.top__menu__language button:hover
+ {
+    color: #5798ab;
+}
+
+.top__menu__language {
+    position: relative;
+    display: inline-block;
+}
+
+
+.top__menu__language button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--cor-menu);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.language__options {
+    display: none;
+    position: absolute;
+    background-color: var(--branco);
+    top: 100%;
+    right: 0;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.language__options a {
+    display: block;
+    color: var(--cor-menu);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.language__options a:hover {
+    background-color: var(--cor-box);
+}
+
+.language__options.show {
+    display: block;
+}
+
+
 /* Main content area */
 main.info {
     max-width: 1200px;
@@ -215,7 +241,7 @@ main.info {
 
 /* Footer */
 .foot {
-    background-color: var(--cor-escura);
+    background-color: var(--cor-secundaria);
     color: var(--cor-do-texto);
     text-align: center;
     padding: 1rem;
@@ -272,7 +298,7 @@ main.info {
 
 /* Contact Information Section */
 .contact-info {
-    background-color: var(--cor-escura);
+    background-color: var(--cor-secundaria);
     color: var(--cor-menu);
     padding: 10px 2rem;
     display: flex;
@@ -294,6 +320,11 @@ main.info {
 
 .contact-info span:last-child {
     margin-right: 0;
+}
+
+.contact.info__content__content {
+  display: inline-block;
+  margin-bottom: 0px; /* ou ajuste conforme necessário */
 }
 
 /* Background Box */
@@ -446,53 +477,6 @@ main.info {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin: 2rem 0;
-}
-
-.top__menu__language {
-    position: relative;
-    display: inline-block;
-}
-
-
-.top__menu__language button {
-    background: none;
-    border: none;
-    color: var(--cor-menu);
-    font-size: 16px;
-    cursor: pointer;
-    color: var(--cor-menu);
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.top__menu__language button:hover {
-    color: var(--cor-principal);
-}
-
-.language__options {
-    display: none;
-    position: absolute;
-    background-color: var(--cor-secundaria);
-    top: 100%;
-    right: 0;
-    min-width: 100px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.language__options a {
-    display: block;
-    color: var(--cor-menu);
-    padding: 10px;
-    text-decoration: none;
-}
-
-.language__options a:hover {
-    background-color: var(--cor-box);
-}
-
-.language__options.show {
-    display: block;
 }
 
 .map-frame {
